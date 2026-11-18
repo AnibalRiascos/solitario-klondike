@@ -1,0 +1,20 @@
+# Salidas de compilación
+target/
+out/
+*.class
+
+# IDE
+.idea/
+*.iml
+nbproject/private/
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Notas internas de trabajo (no forman parte de la entrega pública)
+AGENTS.md
+
+# Archivos comprimidos locales
+*.zip
