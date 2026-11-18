@@ -19,7 +19,18 @@ Proyecto final de **Estructuras de Datos**: una implementación del juego de car
 
 El Solitario Klondike se juega con una baraja francesa de 52 cartas. El objetivo es trasladar todas las cartas a cuatro fundaciones, una por palo, ordenadas desde el As hasta el Rey.
 
-La aplicación permite jugar una partida completa, mover cartas individuales o grupos entre columnas, robar cartas del mazo, devolver cartas de las fundaciones y consultar las reglas en cualquier momento. Al finalizar una partida ganada, la puntuación se registra en un ranking ordenado.
+La aplicación permite jugar una partida completa, mover cartas individuales o grupos entre columnas, robar cartas del mazo, devolver cartas de las fundaciones y consultar las reglas en cualquier momento. Al finalizar una partida ganada, la puntuación se registra en un ranking en memoria que se mantiene ordenado.
+
+## Documentación
+
+| Documento | PDF | Versión editable |
+|---|---|---|
+| **Manual de Usuario** | [Manual_de_Usuario_Solitario_Klondike.pdf](docs/Manual_de_Usuario_Solitario_Klondike.pdf) | [Markdown](docs/Manual_de_Usuario_Solitario_Klondike.md) |
+| **Manual Técnico** | [Manual_Tecnico_Solitario_Klondike.pdf](docs/Manual_Tecnico_Solitario_Klondike.pdf) | [Markdown](docs/Manual_Tecnico_Solitario_Klondike.md) |
+
+El **Manual de Usuario** explica la instalación, la interfaz, los controles, las reglas, las capturas y las condiciones de victoria y derrota. El **Manual Técnico** documenta los requisitos, la compilación, la organización del código, el diagrama de clases, el uso y la complejidad de cada estructura, y las pruebas con resultados esperados y obtenidos.
+
+Las imágenes y el diagrama de clases están en [`docs/assets/`](docs/assets/). Las instrucciones para regenerar los PDF están en [`docs/README.md`](docs/README.md).
 
 ## Requisitos
 
@@ -117,7 +128,7 @@ La partida termina cuando **no quedan movimientos posibles** y **no quedan carta
 | Carta a una fundación | +10 |
 | Fundación a columna | −5 (mínimo 0) |
 
-El ranking de mejores puntajes se guarda en memoria durante la sesión y se muestra ordenado de mayor a menor. Se registra al ganar una partida.
+El ranking de mejores puntajes se mantiene ordenado de mayor a menor en memoria durante la sesión. Se registra al ganar una partida y se pierde al cerrar la aplicación; la interfaz gráfica no incluye una pantalla de ranking.
 
 ## Estructuras de datos utilizadas
 
@@ -143,6 +154,20 @@ Las operaciones mínimas solicitadas están implementadas:
 Solitario/
 ├── pom.xml
 ├── README.md
+├── docs/
+│   ├── Manual_de_Usuario_Solitario_Klondike.pdf
+│   ├── Manual_de_Usuario_Solitario_Klondike.md
+│   ├── Manual_Tecnico_Solitario_Klondike.pdf
+│   ├── Manual_Tecnico_Solitario_Klondike.md
+│   ├── generar_pdf.py
+│   ├── manual_user_content.py
+│   ├── manual_tech_content.py
+│   ├── README.md
+│   └── assets/
+│       ├── 01_pantalla_principal.png
+│       ├── 02_partida_en_curso.png
+│       ├── 03_reglas.png
+│       └── 04_diagrama_clases.png
 └── src/main/java/com/mycompany/
     ├── Model/
     │   ├── Carta.java

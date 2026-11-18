@@ -18,3 +18,8 @@ AGENTS.md
 
 # Archivos comprimidos locales
 *.zip
+
+# Python (generación de manuales)
+__pycache__/
+*.pyc
+.venv/
